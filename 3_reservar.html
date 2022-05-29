@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Barbería Urbana</title>
+    
+    <link rel="stylesheet" href="css/eduardo.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope:400">
+    
+    <script src="https://kit.fontawesome.com/2a24109e80.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<div class="bg-white">
+    <header class="relative">
+        <nav aria-label="Top">
+            <div class="bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="border-b border-gray-200">
+                        <div class="h-16 flex items-center justify-between">
+                            <div class="lg:flex-1 lg:flex lg:items-center">
+                                <a href="/frontend-tpo">
+                                    <span class="sr-only">Barbería Urbana</span>
+                                    <img class="h-8 w-auto" src="images/logo.png" alt="">
+                                </a>
+                            </div>
+                            
+                            <div class="hidden h-full lg:flex">
+                                <div class="px-4 bottom-0 inset-x-0">
+                                    <div class="h-full flex justify-center space-x-8">
+                                        <a href="/frontend-tpo/index.html" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Home</a>
+                                        <a href="/frontend-tpo/2_servicios.html" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Servicios</a>
+                                        <a href="/frontend-tpo/3_reservar.html"
+                                           class="relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px border-indigo-600 text-indigo-600">Reservar</a>
+                                        <a href="/frontend-tpo/4_contacto.html" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Contacto</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Mobile menu button -->
+                            <div class="-mr-2 flex items-center sm:hidden">
+                                <button type="button" id="show-mobile-menu"
+                                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                                        aria-controls="mobile-menu" aria-expanded="false">
+                                    <span class="sr-only">Open main menu</span>
+                                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                         aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                                    </svg>
+                                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                         aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+                <div class="pt-2 pb-3 space-y-1">
+                    <a href="/frontend-tpo/index.html"
+                       class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                    <a href="/frontend-tpo/2_servicios.html"
+                       class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Servicios</a>
+                    <a href="/frontend-tpo/3_reservar.html" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Reservar</a>
+                    <a href="/frontend-tpo/4_contacto.html"
+                       class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="bg-white py-16">
+        <div class="mx-auto max-w-md px-4 sm:px-7 md:max-w-4xl md:px-6">
+            <div class="md:grid md:grid-cols-2 md:divide-x md:divide-gray-200">
+                <div class="md:pr-14">
+                    <div class="flex items-center">
+                        <h2 class="flex-auto font-semibold text-gray-900">Mayo 2022</h2>
+                        <button type="button" class="-my-1.5 flex flex-none items-center justify-center p-1.5 text-gray-400 hover:text-gray-500">
+                            <span class="sr-only">Mes anterior</span>
+                            <svg class="h-5 w-5" x-description="Heroicon name: solid/chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                 aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                      clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button type="button" class="-my-1.5 -mr-1.5 ml-2 flex flex-none items-center justify-center p-1.5 text-gray-400 hover:text-gray-500">
+                            <span class="sr-only">Mes siguiente</span>
+                            <svg class="h-5 w-5" x-description="Heroicon name: solid/chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                 aria-hidden="true">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                      clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-10 grid grid-cols-7 text-center text-xs leading-6 text-gray-900">
+                        <div>Lun</div>
+                        <div>Mar</div>
+                        <div>Mié</div>
+                        <div>Jue</div>
+                        <div>Vie</div>
+                        <div>Sáb</div>
+                        <div>Dom</div>
+                    </div>
+                    <div class="mt-2 grid grid-cols-7 text-sm">
+                        <div class="py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-400">
+                                <time datetime="2022-04-25">25</time>
+                            </button>
+                        </div>
+                        <div class="py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-400">
+                                <time datetime="2022-04-26">26</time>
+                            </button>
+                        </div>
+                        <div class="py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-400">
+                                <time datetime="2022-04-27">27</time>
+                            </button>
+                        </div>
+                        <div class="py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-400">
+                                <time datetime="2022-04-28">28</time>
+                            </button>
+                        </div>
+                        <div class="py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-400">
+                                <time datetime="2022-04-29">29</time>
+                            </button>
+                        </div>
+                        <div class="py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-400">
+                                <time datetime="2022-04-30">30</time>
+                            </button>
+                        </div>
+                        <div class="py-2">
+                            <button type="button" class="bg-gray-100 mx-auto flex h-8 w-8 items-center justify-center text-gray-400">
+                                <time datetime="2022-05-1">1</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="bg-gray-100 mx-auto flex h-8 w-8 items-center justify-center text-gray-400">
+                                <time datetime="2022-05-2">2</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-3">3</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-4">4</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-5">5</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-01-06">6</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-7">7</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="bg-gray-100 mx-auto flex h-8 w-8 items-center justify-center text-gray-400">
+                                <time datetime="2022-05-8">8</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="bg-gray-100 mx-auto flex h-8 w-8 items-center justify-center text-gray-400">
+                                <time datetime="2022-05-9">9</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-10">10</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full font-semibold text-indigo-600 hover:bg-gray-200">
+                                <time datetime="2022-05-11">11</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-12">12</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-13">13</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-14">14</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="bg-gray-100 mx-auto flex h-8 w-8 items-center justify-center text-gray-400">
+                                <time datetime="2022-05-15">15</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="bg-gray-100 mx-auto flex h-8 w-8 items-center justify-center text-gray-400">
+                                <time datetime="2022-05-16">16</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-17">17</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-18">18</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-19">19</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-20">20</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-21">21</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="bg-gray-100 mx-auto flex h-8 w-8 items-center justify-center text-gray-400">
+                                <time datetime="2022-05-22">22</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="bg-gray-100 mx-auto flex h-8 w-8 items-center justify-center text-gray-400">
+                                <time datetime="2022-05-23">23</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-24">24</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900">
+                                <time class="text-red-600" datetime="2022-05-25">25</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-26">26</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full bg-gray-900 font-semibold text-white">
+                                <time datetime="2022-05-27">27</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 text-color hover:bg-gray-200">
+                                <time datetime="2022-05-28">28</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="bg-gray-100 mx-auto flex h-8 w-8 items-center justify-center text-gray-400">
+                                <time datetime="2022-05-29">29</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="bg-gray-100 mx-auto flex h-8 w-8 items-center justify-center text-gray-400">
+                                <time datetime="2022-05-30">30</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-900 hover:bg-gray-200">
+                                <time datetime="2022-05-31">31</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-400">
+                                <time datetime="2022-06-01">1</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-400">
+                                <time datetime="2022-06-02">2</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-400">
+                                <time datetime="2022-06-03">3</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-400">
+                                <time datetime="2022-06-04">4</time>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 py-2">
+                            <button type="button" class="mx-auto flex h-8 w-8 items-center justify-center rounded-full text-gray-400">
+                                <time datetime="2022-06-05">5</time>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <section class="mt-12 md:mt-0 md:pl-14">
+                    <h2 class="font-semibold text-gray-900">Agenda para
+                        <time datetime="2022-05-27">el 27 de Mayo de 2022</time>
+                    </h2>
+                    <ol class="mt-4 space-y-1 text-sm leading-6 text-gray-500">
+                        
+                        <li class="group flex items-center space-x-4 rounded-xl py-2 px-4 focus-within:bg-gray-25 hover:bg-gray-100">
+                            
+                            <img src="images/hair_shape.png"
+                                 alt="" class="h-10 w-10 flex-none rounded-full">
+                            <div class="flex-auto">
+                                <p class="text-gray-900">Reservado Corte Caballero</p>
+                                <p class="mt-0.5">
+                                    <time datetime="2022-05-27T11:30">11:30 hs</time>
+                                    -
+                                    <time datetime="2022-05-27T13:00">13:00 hs</time>
+                                </p>
+                            </div>
+                        </li>
+                        
+                        <li class="group flex items-center space-x-4 rounded-xl py-2 px-4 focus-within:bg-gray-100 hover:bg-gray-100">
+                            <i class="fa-regular fa-calendar"
+                               alt="" class="h-10 w-10 flex-none rounded-full bg-gray-900 font-semibold text-white">
+                            </i>
+                            <div class="flex-auto">
+                                <p class="text-indigo-600">Disponible</p>
+                                <p class="mt-0.5">
+                                    <time datetime="2022-05-27T14:00">14:00 hs</time>
+                                    -
+                                    <time datetime="2022-05-21T15:30">15:30 hs</time>
+                                </p>
+                            </div>
+                        </li>
+                        
+                        <li class="group flex items-center space-x-4 rounded-xl py-2 px-4 focus-within:bg-gray-100 hover:bg-gray-100">
+                            <img src="images/bear_hairstyle.png"
+                                 alt="" class="h-10 w-10 flex-none rounded-full">
+                            <div class="flex-auto">
+                                <p class="text-gray-900">Reservado Corte Barba</p>
+                                <p class="mt-0.5">
+                                    <time datetime="2022-05-27T15:30">15:30 hs</time>
+                                    -
+                                    <time datetime="2022-05-27T17:00">17:00 hs</time>
+                                </p>
+                            </div>
+                        </li>
+                        
+                        <li class="group flex items-center space-x-4 rounded-xl py-2 px-4 focus-within:bg-gray-100 hover:bg-gray-100">
+                            
+                            <img src="images/kid_shape.png"
+                                 alt="" class="h-10 w-10 flex-none rounded-full">
+                            <div class="flex-auto">
+                                <p class="text-gray-900">Reservado Corte Niños</p>
+                                <p class="mt-0.5">
+                                    <time datetime="2022-05-27T17:00">17:00 hs</time>
+                                    -
+                                    <time datetime="2022-05-27T18:30">18:30 hs</time>
+                                </p>
+                            </div>
+                        </li>
+                        
+                        <li class="group flex items-center space-x-4 rounded-xl py-2 px-4 focus-within:bg-gray-100 hover:bg-gray-100">
+                            <i class="fa-regular fa-calendar"
+                               alt="" class="h-10 w-10 flex-none rounded-full bg-gray-900 font-semibold text-white">
+                            </i>
+                            <div class="flex-auto">
+                                <p class="text-indigo-600">Disponible</p>
+                                <p class="mt-0.5">
+                                    <time datetime="2022-05-27T18:30">18:30 hs</time>
+                                    -
+                                    <time datetime="2022-05-27T20:00">20:00 hs</time>
+                                </p>
+                            </div>
+                        </li>
+                    
+                    </ol>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 class="font-semibold text-gray-900" style="text-align:center">Horarios de Atención:</h3>
+<p style="text-align:center">Mar a Sáb: de 10 a 13:00 hs y de 14 a 20 hs</p>
+<p style="text-align:center">Dom y Lun: cerrado</p>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $("#mobile-menu").hide();
+        
+        $('#show-mobile-menu').click(function (event) {
+            event.stopPropagation();
+            $("#mobile-menu").toggle();
+        });
+    });
+</script>
+
+</body>
+
+</html>
